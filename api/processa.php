@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./css/cadastrar.css">
         <title>Escola Italiana Eugenio Montale</title>
-        <script src="js/funcoes.js"></script>
+        <script src="../js/funcoes.js"></script>
     </head>
     <body>
         <header>
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $qtidadeProduto = $_POST['qtidadeProduto'];
 
     // Inclui o arquivo de conexão com o banco de dados
-    include_once("conexao.php");
+    include_once "conexao.php";
 
     // Consulta SQL para verificar se o produto já existe
     $sql_select = "SELECT * FROM estoque WHERE CodProduto = '$CodProduto'";
